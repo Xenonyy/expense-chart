@@ -20,7 +20,7 @@ export const GraphColumn: FC<GraphColumnProps> = ({ amount, day, isActive, onAct
           height: `${amount * 2.5}px`,
         }}
         className={clsx(
-          'w-8 sm:w-12 mx-1 rounded-sm transition-all duration-300 ease-in-out cursor-pointer flex items-end justify-center',
+          'w-8 sm:w-12 lg:w-14 mx-1 rounded-sm transition-all duration-300 ease-in-out cursor-pointer flex items-end justify-center',
           {
             'bg-[#ec755d] hover:bg-[#f7a48f]': !isActive,
             'bg-[#74b0bf] hover:bg-[#97c7d3]': isActive,
