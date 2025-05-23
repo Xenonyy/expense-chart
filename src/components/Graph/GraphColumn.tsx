@@ -1,6 +1,7 @@
 import { clsx } from 'clsx';
 import { GraphDataItem } from '../../types/GraphDataItem';
 import { FC, useState } from 'react';
+import { Box } from '../Box/Box';
 
 interface GraphColumnProps extends GraphDataItem {
   isActive: boolean;
@@ -8,28 +9,34 @@ interface GraphColumnProps extends GraphDataItem {
 }
 
 export const GraphColumn: FC<GraphColumnProps> = ({ amount, day, isActive, onActivate }) => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
 
   return (
-    <button
-      onClick={onActivate}
-      tabIndex={0}
-      style={{ height: `${amount * 2.5}px` }}
-      className={clsx(
-        'w-12 flex justify-center items-center text-center flex-row rounded-md p-4 transition-all duration-300 ease-in-out cursor-pointer',
-        isActive ? 'bg-[#74b0bf]' : 'bg-[#ec755d]',
-      )}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <Box className="relative flex flex-col items-center">
+      <button
+        onClick={onActivate}
+        tabIndex={0}
+        style={{
+          height: `${amount * 2.5}px`,
+        }}
+        className={clsx(
+          'w-12 flex justify-center items-center text-center flex-row rounded-md p-4 transition-all duration-300 ease-in-out cursor-pointer',
+          {
+            'bg-[#ec755d] hover:bg-[#f7a48f]': !isActive,
+            'bg-[#74b0bf] hover:bg-[#97c7d3]': isActive,
+          },
+        )}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      ></button>
       <span
         className={clsx(
-          'absolute p-1 text-white text-xs pointer-events-none transition-opacity duration-300',
+          'absolute -top-7 left-1/2 -translate-x-1/2 p-1 rounded bg-black text-white text-xs pointer-events-none transition-opacity duration-300',
           isHovered ? 'opacity-100' : 'opacity-0',
         )}
       >
         {`$${amount}`}
       </span>
-    </button>
+    </Box>
   );
 };

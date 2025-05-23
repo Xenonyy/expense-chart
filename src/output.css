@@ -193,6 +193,15 @@
   .static {
     position: static;
   }
+  .-top-7 {
+    top: calc(var(--spacing) * -7);
+  }
+  .left-1 {
+    left: calc(var(--spacing) * 1);
+  }
+  .left-1\/2 {
+    left: calc(1/2 * 100%);
+  }
   .my-10 {
     margin-block: calc(var(--spacing) * 10);
   }
@@ -243,6 +252,14 @@
   }
   .border-collapse {
     border-collapse: collapse;
+  }
+  .-translate-x-1 {
+    --tw-translate-x: calc(var(--spacing) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .-translate-x-1\/2 {
+    --tw-translate-x: calc(calc(1/2 * 100%) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
   }
   .-translate-y-8 {
     --tw-translate-y: calc(var(--spacing) * -8);
@@ -297,8 +314,14 @@
   .bg-\[\#74b0bf\] {
     background-color: #74b0bf;
   }
+  .bg-\[\#97c7d3\] {
+    background-color: #97c7d3;
+  }
   .bg-\[\#ec755d\] {
     background-color: #ec755d;
+  }
+  .bg-\[\#f7a48f\] {
+    background-color: #f7a48f;
   }
   .bg-\[\#f7e8db\] {
     background-color: #f7e8db;
@@ -399,6 +422,11 @@
     outline-style: var(--tw-outline-style);
     outline-width: 1px;
   }
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, visibility, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
   .transition-all {
     transition-property: all;
     transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
@@ -416,6 +444,20 @@
   .ease-in-out {
     --tw-ease: var(--ease-in-out);
     transition-timing-function: var(--ease-in-out);
+  }
+  .hover\:bg-\[\#97c7d3\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #97c7d3;
+      }
+    }
+  }
+  .hover\:bg-\[\#f7a48f\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #f7a48f;
+      }
+    }
   }
 }
 body {
