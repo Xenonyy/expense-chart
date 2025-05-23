@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL:[](https://github.com/Xenonyy/expense-chart)
-- Live Site URL:[](https://fe-mentor-expense-chart.netlify.app/)
+- [Solution URL:](https://github.com/Xenonyy/expense-chart)
+- [Live Site URL:](https://fe-mentor-expense-chart.netlify.app/)
 
 ## My process
 
