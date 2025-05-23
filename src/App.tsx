@@ -15,19 +15,17 @@ export const App = () => {
         <img src={'logo.svg'} alt="logo" className="pr-4 h-18 w-18"></img>
       </Box>
       <Box className="bg-white h-full rounded-2xl p-4 sm:p-8 mt-5 min-w-xs max-w-lg md:w-lg ">
-        <Box className="justify-start items-start flex-col">
+        <Box className="w-full h-full justify-start items-start flex-col text-start">
           <Text className="text-[#2e1e12] text-xl sm:text-3xl font-semibold" text="Spending - Last 7 days" />
-          <Box className="justify-evenly items-start flex-col">
+          <Box className="w-full h-full justify-evenly items-start flex-col">
             <Graph data={data} />
             <div className="w-full h-1 bg-[#f7f2ea] my-10" />
           </Box>
-          <Box className="w-full h-full justify-start items-start flex-row">
-            <Box className="w-full h-full justify-start items-start flex-col">
-              <Text className="text-[#a4a19c] text-sm sm:text-base  mt-[-2px] pb-1" text="Total this month" />
-              <Text className="text-[#2e1e12] text-2xl sm:text-4xl font-semibold" text="$478.33" />
-            </Box>
-            <Box className="w-full h-full items-end flex-col ">
-              <Text className="font-medium " text="+2.4%" />
+          <Box className="w-full h-full justify-start items-start flex-col text-start relative">
+            <Text className="text-[#a4a19c] text-sm sm:text-base mt-[-2px] pb-1" text="Total this month" />
+            <Text className="text-[#2e1e12] text-2xl sm:text-4xl font-semibold" text="$478.33" />
+            <Box className="w-full h-full items-end flex-col text-end absolute">
+              <Text className="font-medium" text="+2.4%" />
               <Text className="text-[#a4a19c] text-sm sm:text-base mt-[-2px] pb-1" text="from last month" />
             </Box>
           </Box>
