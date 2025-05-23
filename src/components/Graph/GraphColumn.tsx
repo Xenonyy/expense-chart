@@ -12,7 +12,7 @@ export const GraphColumn: FC<GraphColumnProps> = ({ amount, day, isActive, onAct
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
   return (
-    <Box className="relative flex flex-col items-center">
+    <Box className="relative flex flex-col items-center w-8 sm:w-12 lg:w-14 max-w-14">
       <button
         onClick={onActivate}
         tabIndex={0}
@@ -20,7 +20,7 @@ export const GraphColumn: FC<GraphColumnProps> = ({ amount, day, isActive, onAct
           height: `${amount * 2.5}px`,
         }}
         className={clsx(
-          'w-8 sm:w-12 lg:w-14 max-w-14 mx-1 rounded-sm transition-all duration-300 ease-in-out cursor-pointer flex items-end justify-center',
+          ' mx-1 rounded-sm transition-all duration-300 ease-in-out cursor-pointer flex items-end justify-center',
           {
             'bg-[#ec755d] hover:bg-[#f7a48f]': !isActive,
             'bg-[#74b0bf] hover:bg-[#97c7d3]': isActive,
