@@ -406,9 +406,9 @@
       width: calc(var(--spacing) * 12);
     }
   }
-  .sm\:max-w-md {
+  .sm\:w-md {
     @media (width >= 40rem) {
-      max-width: var(--container-md);
+      width: var(--container-md);
     }
   }
   .sm\:p-8 {
