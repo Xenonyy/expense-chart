@@ -464,6 +464,11 @@
       width: var(--container-lg);
     }
   }
+  .min-md\:min-w-lg {
+    @media (width >= 48rem) {
+      min-width: var(--container-lg);
+    }
+  }
   .lg\:w-14 {
     @media (width >= 64rem) {
       width: calc(var(--spacing) * 14);
