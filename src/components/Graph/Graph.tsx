@@ -7,7 +7,7 @@ export const Graph: FC<GraphData> = ({ data }) => {
   const [activeDay, setActiveDay] = useState<string>('');
 
   return (
-    <Box className="justify-around items-end flex-row w-full pt-10">
+    <Box className="justify-around items-end flex-row pt-10">
       {data.map((data) => (
         <Box className="flex-col" key={data.amount}>
           <GraphColumn
